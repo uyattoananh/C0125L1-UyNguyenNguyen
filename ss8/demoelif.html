@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let thang = +prompt("Moi ban nhap thang")
+    let nam = +prompt("Moi ban nhap nam")
+    function dayNum() {
+        if (+nam % 4 === 0 && +nam % 400 === !0) {
+            if (thang == 1 || thang == 3 || thang == 5 || thang == 7 || thang == 8 || thang == 10 || thang == 12) {
+                alert ("31")
+            } else if (thang == 4 || thang == 6 || thang == 9 || thang == 11) {
+                alert ("30")
+            } else if (thang == 2) {
+                alert ("29")
+            }
+        } else if (+nam % 4 === !0) {
+            if (thang == 1 || thang == 3 || thang == 5 || thang == 7 || thang == 8 || thang == 10 || thang == 12) {
+                alert ("31")
+            } else if (thang == 4 || thang == 6 || thang == 9 || thang == 11) {
+                alert ("30")
+            } else if (thang == 2) {
+                alert ("28")
+            }
+        }
+    }
+</script>
+</body>
+</html>
