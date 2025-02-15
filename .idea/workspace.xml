@@ -4,11 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f61d740d-f3e1-47dc-ad65-1f7080276dce" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/codegymjames/simpleform.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/codegymjames/taoformcoban.html" beforeDir="false" />
-    </list>
+    <list default="true" id="f61d740d-f3e1-47dc-ad65-1f7080276dce" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -69,6 +65,7 @@
       <workItem from="1739541226816" duration="1900000" />
       <workItem from="1739622504952" duration="232000" />
       <workItem from="1739624674081" duration="1402000" />
+      <workItem from="1739626315070" duration="250000" />
     </task>
     <servers />
   </component>
