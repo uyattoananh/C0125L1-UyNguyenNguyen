@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Click</title>
+</head>
+<body>
+<div id="messageDiv"></div>
+<button type="button" id="button" onclick="clicked()">Click Me!</button>
+<button type="button" id="button2" onclick="clicked2()">Click Me!</button>
+<button type="button" id="button3" onclick="clicked3()">Click Me!</button>
+<button type="button" id="button4" onclick="clicked4()">Click Me!</button>
+</body>
+<script>
+    function clicked() {
+        alert('Hello');
+    }
+    function clicked2() {
+        document.getElementById('messageDiv').innerHTML = 'Hello';
+    }
+    function clicked3() {
+        document.write ("Hello");
+    }
+    function clicked4() {
+        console.log ("Hello");
+    }
+
+
+</script>
+</html>
