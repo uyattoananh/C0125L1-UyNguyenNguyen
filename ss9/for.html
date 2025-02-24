@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Prime Number Finder</title>
+</head>
+<body>
+<script>
+    for (k = 1;k < 101; k++) {
+        for (let i = 2; i < Math.sqrt(k); i++) {
+            if (k % i === 0) {
+                continue;
+            }
+            if (k % i === !0) {
+                console.log(k)
+                break
+            }
+        }
+    }
+</script>
+</body>
+</html>
