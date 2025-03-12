@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+
+</body>
+<script>
+    a = +prompt()
+    b = +prompt()
+
+    let checkA  = numberCheck(a)
+    let checkB  = numberCheck(b)
+
+    if (checkA && checkB) {
+        sumFactorA = perfectSum(a)
+        sumFactorB = perfectSum(b)
+
+        confirmA_B = checkPair(sumFactorA, b)
+        confirmB_A = checkPair(sumFactorB, a)
+
+        if (confirmA_B && confirmB_A) {
+            document.write(a + " and " + b + " are a perfect pair")
+        } else {
+            document.write(a + " and " + b + " are not a perfect pair")
+        }
+    } else {
+        document.write("Please enter valid numbers")
+    }
+
+
+
+    function checkPair (n,m) {
+        return n === m
+    }
+
+    function getPrompt(n) {
+        n = +prompt("Enter a number")
+        return n
+    }
+
+    function numberCheck(n) {
+        return Number.isInteger(n) && n > 0;
+    }
+
+    function perfectSum(n) {
+        let sum = 1
+        for (let i = 2; i <= Math.sqrt(n); i++) {
+            if (n % i === 0) {
+                sum += i;
+                if (i !== n / i) {
+                    sum += n / i;
+                }
+            }
+        }
+        return sum
+    }
+
+</script>
+</html>

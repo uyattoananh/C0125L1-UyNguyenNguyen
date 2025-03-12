@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let scoresOfA = [8,7,9,8.6,5.7,10,8,9,6]
+    let scoresSum = 0
+    for (let i = 0; i < scoresOfA.length; i++) {
+        scoresSum += scoresOfA[i];
+
+    }
+    scoreGrade = scoresSum / scoresOfA.length
+    if (scoreGrade >= 8) {
+        alert("Hoc luc gioi")
+    } else if (scoreGrade >= 6.5) {
+        alert("Hoc luc kha")
+    } else if (scoreGrade >= 5) {
+        alert("Hoc luc trung binh")
+    } else  {
+        alert("Hoc luc yeu")
+    }
+
+</script>
+</body>
+</html>

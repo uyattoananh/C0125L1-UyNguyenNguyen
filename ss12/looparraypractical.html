@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Array</title>
+</head>
+<body>
+<script>
+    let numbers = prompt("Enter your numbers with format: number + space + number, ending with a number").split(" ")
+    let repedNum = +prompt("Enter a number to see its frequency")
+    let numberArray = [];
+    for (let i = 0; i < numbers.length; i++) {
+        numberArray.push(Number(numbers[i]));
+    }
+    //Tinh tong cua array
+    let arrTotal = 0
+    for (let i = 0; i < numberArray.length; i ++) {
+        arrTotal += numberArray[i];
+    }
+    alert("Sum = " + arrTotal)
+    //Tinh max cua array
+    let max = numberArray[0]
+    for (let i = 0; i < numberArray.length; i++) {
+        if (numberArray[i] > max) {
+            max = numberArray[i]
+        }
+    }
+    alert("Max = " + max)
+    //Tinh so lan lap cua so trong array
+    let numFrequency = 0
+    for (let i = 0; i < numberArray.length; i++) {
+        if (numberArray[i] === repedNum) {
+            numFrequency += 1
+        }
+    }
+    alert("The number " + repedNum + "has a frequency of" + numFrequency)
+    //Dao nguoc thu tu cua array
+    let newArray = numberArray.slice()
+    newArrayReversed = newArray.reverse()
+    alert("The array has been reversed to " + newArrayReversed)
+    //Loc so chan ra khoi array
+    let numberEvenArray = [];
+    for (let i = 0; i < numberArray.length; i++) {
+        if (numberArray[i] % 2 === 0) {
+            numberEvenArray.push(Number(numbers[i]));
+        }
+    }
+    alert("All even numbers has been put into the new array: " + numberEvenArray)
+
+</script>
+</body>
+</html>

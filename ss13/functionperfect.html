@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Perfect Number Checker</title>
+</head>
+<body>
+
+    <label><input type ="number" name ="inputBox" id="inputBox"></label>
+    <label><input type ="submit" value="confirm number" onclick="perfectNumber()"></label>
+
+
+</body>
+<script>
+    function perfectNumber() {
+        let numberInput = parseFloat(document.getElementById('inputBox').value);
+        let check = numberCheck(numberInput)
+        if (check) {
+            let checkPerfect = perfectSum(numberInput);
+            perfectConfirm(checkPerfect, numberInput)
+        } else {
+            alert("Please provide a valid positive integer.");
+        }
+    }
+
+
+    function numberCheck(n) {
+        return Number.isInteger(n) && n > 0;
+    }
+
+    function perfectSum(n) {
+        let sum = 1
+        for (let i = 2; i <= Math.sqrt(n); i++) {
+            if (n % i === 0) {
+                sum += i;
+                if (i !== n / i) {
+                    sum += n / i;
+                }
+            }
+        }
+        return sum === n && n !== 1;
+    }
+
+    function perfectConfirm(n,numberInput) {
+        if (n) {
+            alert(numberInput + " is perfect")
+        }   else{
+            alert(numberInput + " is not perfect")
+        }
+
+    }
+
+
+</script>
+</html>
