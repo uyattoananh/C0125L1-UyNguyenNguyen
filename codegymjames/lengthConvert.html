@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p>
+  <label>Meters</label>
+  <input id="inputMeters" type="number" placeholder="Meters"
+         oninput="mTof(this.value)"
+         onchange="mTof(this.value)">
+</p>
+<p>Feet: <span id="outputFeet"></span></p>
+<p>
+  <label>Feet</label>
+  <input id="inputFeet" type="number" placeholder="Feet"
+         oninput="fTom(this.value)"
+         onchange="fTom(this.value)">
+</p>
+<p>Meters: <span id="outputMeters"></span></p>
+<script>
+  function mTof (m) {
+    parseInt(m);
+    document.getElementById("outputFeet").innerHTML = feet = m / 0.305;
+  }
+  function fTom (f) {
+    parseInt(f);
+    document.getElementById("outputMeters").innerHTML = meters = f * 0.305;
+  }
+</script>
+</body>
+</html>
