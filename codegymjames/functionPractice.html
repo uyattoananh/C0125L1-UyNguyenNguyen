@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function alertMessage (n) {
+        alert(n)
+    }
+    alertMessage ("Xin Chao")
+
+    function increment(n) {
+        document.write(n + 1 + "<br>")
+    }
+    increment(+prompt("Enter a number"))
+
+    a = prompt("Enter the first number")
+    b = prompt("Enter the second number")
+    function alertOrSum (n,m) {
+        if (n > m) {
+            alert(n + " is larger than " + m)
+            return "None"
+        } else {
+            return n + m
+        }
+    }
+    c = alertOrSum(a,b)
+    document.write(c + "<br>")
+
+    function addNumbers() {
+        let firstNum = 4;
+        let secondNum = 8;
+        result = firstNum + secondNum;
+        return result;
+    }
+    result = 0;
+    alert (result)
+    result = addNumbers();
+    alert (result)
+
+    function starFind (star) {
+        let stars = ["Polaris", "Aldebaran", "Deneb", "Vega", "Altair", "Dubhe", "Regulus"]
+        let systems = ["Ursa Minor", "Taurus", "Cygnus", "Lyra", "Aquila", "Ursa Major", "Leo"]
+        for (let i = 0; i < stars.length; i++) {
+            if (stars[i] === star) {
+                return systems[i]
+            }
+        }
+        return "No system found"
+    }
+    starIndex = starFind (prompt("Enter a star name"))
+    document.write(starIndex + "<br>")
+</script>
+</body>
+</html>
