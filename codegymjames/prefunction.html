@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Function</title>
+</head>
+<body>
+<script>
+    let myColor = ["Red", "Green", "White", "Black"];
+    let myColor2 = ""
+    for (let i = 0; i < myColor.length; i++) {
+        myColor2 += myColor[i] + ", ";
+    }
+    document.write(myColor2 + "<br>");
+
+    let number = prompt("Enter a number");
+    let result = number[0]
+    for (let i = 1; i < number.length; i++) {
+        if (number[i-1] % 2 == 0) {
+            result += "-"
+        }
+        result += number[i]
+    }
+    document.write(result + "<br>");
+
+
+    let product = prompt("Enter a word");
+    let final = ""
+    for (let i = 0; i < product.length; i++) {
+        if (product[i] === product[i].toLowerCase()) {
+            final += product[i].toUpperCase()
+        } else if (product[i] === product[i].toUpperCase()) {
+            final += product[i].toLowerCase()
+        }
+
+    }
+    document.write(final + "<br>");
+</script>
+</body>
+</html>
