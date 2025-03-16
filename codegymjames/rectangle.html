@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  let rectangle = function (width, length) {
+      this.width = width;
+      this.length = length;
+      this.getWidth = function () {
+        return this.width;
+      }
+      this.getLength = function () {
+        return this.length;
+      }
+      this.setWidth = function (width) {
+        this.width = width;
+      }
+      this.setLength = function (length) {
+        this.length = length;
+      }
+      this.getArea = function () {
+        let area = this.width * this.length;
+        this.area = area;
+        return this.area;
+      }
+      this.getPerimeter = function () {
+        let perimeter = 2*(this.width + this.length);
+        this.perimeter = perimeter;
+        return this.perimeter;
+      }
+  }
+  myRectangle = new rectangle(100, 200);
+  document.write("Area = " + myRectangle.getArea() + "<br>");
+  document.write("Perimeter = " + myRectangle.getPerimeter() + "<br>");
+</script>
+
+</body>
+</html>
