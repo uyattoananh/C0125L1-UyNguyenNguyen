@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  let myTemp = function (celsius) {
+    this.celsius = celsius;
+    this.getCelsius = function () {
+      return this.celsius
+    }
+    this.getKelvin = function () {
+      return this.celsius + 273.15
+    }
+    this.getFahrenheit = function () {
+      return this.celsius * 1.8 + 32
+    }
+  }
+  let myCelsius = new myTemp(25)
+  document.write("Celsius = " + myCelsius.getCelsius() + "<br>" )
+  document.write("Kelvin = " + myCelsius.getKelvin() + "<br>" )
+  document.write("Fahrenheit = " + myCelsius.getFahrenheit() + "<br>" )
+
+</script>
+
+</body>
+</html>
