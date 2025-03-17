@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function Apple(weight) {
+        this.isEmpty = false;
+        this.weight = weight;
+        this.getWeight = function () {
+            return this.weight;
+        }
+        this.isEmptyCheck = function () {
+            return this.isEmpty;
+        }
+        this.eaten = function () {
+            if (!this.isEmpty) {
+                this.weight -= 1;
+                if (this.weight <= 0) {
+                    this.isEmpty = true;
+                }
+            }
+            return this.weight;
+        }
+    }
+
+    function Human(name, gender, weight, speech, apple) {
+        this.name = name;
+        this.gender = gender;
+        this.humanWeight = weight;
+        this.speech = speech;
+        this.apple = apple
+        this.getName = function () {
+            return this.name;
+        }
+        this.getGender = function () {
+            return this.gender;
+        }
+        this.getHumanWeight = function () {
+            return this.humanWeight;
+        }
+        this.getSpeech = function () {
+            return this.speech;
+        }
+        this.eatApple = function () {
+            if (!this.apple.isEmpty) {
+                this.apple.eaten();
+                this.humanWeight += 1;
+                return this.humanWeight;
+            }
+        }
+    }
+    let apple = new Apple(10)
+    human1 = new Human("Adam", "male", 63, "hello world", apple);
+    human2 = new Human("Eve", "female", 44, "hi world", apple);
+
+    while (!apple.isEmptyCheck()) {
+        human1.eatApple();
+        document.write("Adam weighs " + human1.getHumanWeight() + " units" + "<br>");
+        document.write("Apple weighs " + apple.getWeight() + " units<br>");
+        human2.eatApple();
+        document.write("Eve weighs " + human2.getHumanWeight() + " units" + "<br>");
+        document.write("Apple weighs " + apple.getWeight() + " units<br>");
+    }
+</script>
+</body>
+</html>
