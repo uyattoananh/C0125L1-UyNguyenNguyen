@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function Switch(state) {
+        this.state = state;
+        this.getState = function () {
+            return this.state;
+        }
+        this.flickState = function () {
+            this.state = !this.state;
+            return this.state;
+        }
+    }
+    function Bulb(switchObject) {
+        this.switchObject = switchObject;
+        this.getBulbState = function () {
+            let bulbState;
+            if (this.switchObject.getState()) {
+                bulbState = "on";
+            } else {
+                bulbState = "off";
+            } return bulbState;
+        }
+    }
+    let lightswitch = new Switch(true)
+    let lightbulb = new Bulb(lightswitch)
+    for (let i = 0; i < 10; i++) {
+
+        document.write(lightbulb.getBulbState() + "<br>")
+
+        document.write(lightswitch.flickState() + "<br>")
+    }
+
+</script>
+</body>
+</html>
